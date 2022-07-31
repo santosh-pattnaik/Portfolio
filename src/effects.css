@@ -373,18 +373,22 @@ nav .fa-solid{
     nav ul{
         position: fixed;
         top: 0;
-        right: -20rem;
+        right: 0;
         background: #ff004f;
         color: #080808;
-        width: 20rem;
+        width: 40rem;
         height: 100vh;
         padding-top: 5rem;
         z-index: 2;
         transition: all 0.5s;
+        display: none;;
     }
     nav ul li{
         margin: 1.5rem;
         display: block;
+    }
+    nav ul li a{
+        font-size: 3rem
     }
     nav ul .fa-solid{
         position: absolute;
