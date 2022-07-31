@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Uchen', serif;
+    scroll-behavior: smooth;
+}
+html{
+    font-size: 62.50%;
+}
+body{
+    background-color: #080808;
+    color: #fff;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/background.png');
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 0.7rem 10rem 0 10rem;
+}
+.container nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 20rem;
+    height: 4rem;
+}
+#sideMenu{
+    margin-right: -3.5rem;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 3.5rem;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.9rem;
+    position: relative;
+}
+nav ul li a::after{
+    content: "";
+    width: 0;
+    height: 0.3rem;
+    background-color: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom:0.4rem;
+    transition: all 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+nav{
+    position: sticky;
+    top: 1rem;
+}
+.header-text{
+    margin-top: 13%;
+    font-size: 3rem;
+}
+.header-text h1{
+    font-size: 5.5rem;
+}
+.header-text h1 span{
+    color: #ff004f;
+}
+/* ------------about---------- */
+#about{
+    margin:7rem 0 17rem 0;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.col-1{
+    flex-basis: 35%;
+}
+.col-1 img{
+    width: 100%;
+    border-radius: 2rem;
+}
+.col-2{
+    flex-basis: 60%;
+    margin-top: -2rem;
+}
+.sub-title {
+    font-size: 5rem;
+    font-weight: 600;
+}
+.col-2 p{
+    font-size: 1.3rem;
+    margin-top:-1rem ;
+}
+.tab-title{
+    display: flex;
+    margin-top: 0.3rem;
+}
+.tab-title p{
+    font-size: 2rem;
+    margin-top:1rem ;
+}
+.tab-link{
+    margin-right: 5rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-link::after{
+    content:'';
+    width: 0;
+    height: 0.3rem;
+    background-color: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+}
+.tab-link.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    font-size: 1rem;
+    list-style: none;
+}
+.tab-contents ul li span{
+    color: #ed5384;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+#work{
+    font-size: 1.5rem;
+}
+
+/* services */
+
+#services{
+    margin: 8rem 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2rem;
+    margin-top: 5rem;
+}
+.services-list div{
+    background: #262626;
+    padding: 4rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    border-radius: 1rem;
+    transition: background 0.5s,transform 0.5s;
+}
+.services-list div i{
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+.services-list div h1{
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+.services-list div p{
+    font-size: 1.5rem;
+}
+.services-list div a{
+    font-size: 1.2rem;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 2rem;
+}
+.services-list div:hover{
+    background:#ff004f;
+    transform: translateY(-1rem);
+}
+/* -----------portfolio----------- */
+#portfolio{
+    padding: 4rem 0;
+    margin-bottom: 10rem;
+}
+.work-list{
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2rem;
+    margin-top: 3rem;
+}
+.work{
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+.work img{
+    width: 100%;
+    height: 25rem;
+    display: block;
+    transition: tranform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background:linear-gradient(rgba(0,0,0,0.6), #ff004f) ;
+    border-radius:1rem ;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 3rem;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.layer p{
+    font-size: 1.3rem;  
+}
+.layer a{
+    font-size: 2rem;  
+    text-decoration: none;
+    color: #ff004f;
+    margin-top: 2rem;
+    line-height: 6rem;
+    background: #fff;
+    border-radius: 50%;
+    width: 6rem;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.seeMoreBtn{
+    display: block;
+    margin: 5rem auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 1rem 2rem;
+    border-radius: 0.6rem;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: background 0.5s;
+}
+.seeMoreBtn:hover{
+    background:#ff004f ;
+}
+
+
+/* -------------contact----------- */
+
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+.contact-left p i{
+    color: #ff004f;
+}
+.contact-left p a{
+    text-decoration: none;
+    color: #fff;
+}
+.social-icon{
+    font-size: 3rem;
+    margin:2rem 0 0 1rem;
+}
+.social-icon i{
+    color:#fff;
+    transition: transform 0.5s;
+}
+.social-icon i:hover{
+    color:#ff004f;
+    transform: translateY(-0.5rem);
+}
+.cvBtn{
+    display: inline-block;
+    background-color: #ff004f;  
+    margin-top: 2rem;
+}
+
+/* --------------copyright------------------- */
+.contact-right{
+    width: 100%;
+}
+form input,form textarea{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #262626;
+    color: #fff;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    font-size: 1.8rem;
+    border-radius: 0.6rem;
+    display: flex;
+    flex-direction: column;
+}
+form .cvBtn{
+    padding: 1rem 5rem;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+.copyright{
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    background: #262626;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+.copyright i{
+    color: #ff004f;
+}
+
+#msg{
+    color: #00ffff;
+    display: block;
+    margin-top: -4rem;
+}
+
+/* ----------------mobile responsive--------- */
+nav .fa-solid{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #header{
+        background-image: url(../img/formobile.png);
+    }
+    .logo{
+        margin-left: -8rem;
+        height: 5rem;
+    }
+    .header-text{
+        margin-top: 30%;
+        font-size: 1.8rem;
+        margin-left: -9rem;
+    }
+    .header-text  h1{
+        font-size: 3rem;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 2.5rem;
+    }
+    nav ul{
+        position: fixed;
+        top: 0;
+        right: -20rem;
+        background: #ff004f;
+        color: #080808;
+        width: 20rem;
+        height: 100vh;
+        padding-top: 5rem;
+        z-index: 2;
+        transition: all 0.5s;
+    }
+    nav ul li{
+        margin: 1.5rem;
+        display: block;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 2.5rem;
+        left: 2.5rem;
+        color: #fff;
+    }
+    nav .fa-solid{
+        margin-right: -7rem;
+    }
+    .sub-title{
+        font-size: 3.2rem;
+    }
+    .col-1{
+        flex-basis: 100%;
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    .col-1 img{
+        width: 39rem;
+        height: 39rem;
+        margin-left: -10rem;
+    }
+    .col-2{
+        flex-basis: 100%;
+        margin-left: -8rem;
+    }
+    .col-2 p{
+        font-size: 1.5rem;
+        width: 35rem;
+    }
+    .tab-title{
+        display: flex;
+        /* flex-wrap: wrap; */
+        /* flex-direction: column; */
+        margin-top: 1rem;
+    }
+    .tab-link{
+        margin-right: -26rem;
+    }
+    #services{
+        margin-left: -3rem;
+    }
+    .services-list div h1{
+        font-size: 3rem;
+    }
+    #portfolio{
+        margin-left: -3rem;
+    }
+    .contact-left{
+        margin-left: -8rem;
+    }
+    .contact-right{
+        margin-left: -8rem;
+    }
+    .contact-right form{
+        width: 40rem;
+    }
+}
